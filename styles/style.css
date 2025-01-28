@@ -325,4 +325,8 @@ footer {
     section {
         padding: 2rem 1rem;
     }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
 }
