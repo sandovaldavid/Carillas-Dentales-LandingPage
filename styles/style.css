@@ -25,12 +25,13 @@ h3 {
 
 /* Header Styles */
 header {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('../images/hero-bg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('../images/background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     min-height: 90vh;
     position: relative;
+    color: white;
 }
 
 nav {
