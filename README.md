@@ -40,7 +40,7 @@ View live demo: [Coming soon](carillas-dentales.devprojects.tech)
 
 | Desktop View | Mobile View |
 |-------------|-------------|
-| ![Desktop](https://via.placeholder.com/300x200?text=Desktop+View) | ![Mobile](https://via.placeholder.com/150x300?text=Mobile+View) |
+| ![Desktop](/images/desktop-view.png) | ![Mobile](/images/mobile-view.png) |
 
 ## 📋 Prerequisites
 
