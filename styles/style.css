@@ -34,40 +34,62 @@ header {
 }
 
 nav {
-    position: fixed;
-    top: 0;
     width: 100%;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    padding: .5rem 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-primary);
 }
 
 nav.scrolled {
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.95);
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .contact-info {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     gap: 2rem;
-    padding-right: 3rem;
+    padding-right: 2rem;
 }
 
 .contact-info a {
+    position: relative;
     color: var(--color-primary);
-    font-size: 1.25rem;
-    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
+.contact-info a i {
+    font-size: 1.2rem;
+}
+
 .contact-info a:hover {
+    background: rgba(0, 123, 255, 0.1);
     transform: translateY(-2px);
-    color: #0056b3;
+}
+
+.contact-info a:active {
+    transform: translateY(0);
 }
 
 .hero {
@@ -75,6 +97,28 @@ nav.scrolled {
     margin: 0 auto;
     padding: 2rem;
     animation: fadeIn 1s ease-out;
+}
+
+.contact-info a::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.contact-info a:hover::after {
+    opacity: 1;
+    visibility: visible;
 }
 
 .hero h1 {
@@ -267,6 +311,15 @@ footer {
     .contact-info {
         padding-right: 1.5rem;
         gap: 1.5rem;
+    }
+
+    .contact-info a {
+        padding: 0.4rem 0.8rem;
+        font-size: 1rem;
+    }
+
+    .contact-info a::after {
+        display: none;
     }
 
     section {
